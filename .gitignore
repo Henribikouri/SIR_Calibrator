@@ -1,0 +1,60 @@
+# =============================================================================
+# .gitignore en liste blanche : tout est ignore a la racine, sauf ce qui est
+# explicitement autorise ci-dessous. Un nouveau fichier (Word, PowerPoint,
+# script de travail, cle API...) n'est donc jamais publie par accident.
+# =============================================================================
+
+/*
+
+# --- Configuration du depot ---
+!/.gitignore
+!/.gitattributes
+!/.python-version
+!/README.md
+!/requirements.txt
+
+# --- Pipeline M1 -> M6 ---
+!/pipeline.py
+!/M1_acquisition.py
+!/M1_acquisition_cameroun.py
+!/M2_ia_prior.py
+!/M3_calibration.py
+!/M4_generation_gaml.py
+!/M5_validation.py
+!/M6_comparaison.py
+!/wave_selection.py
+
+# --- Reproduction ---
+!/reproduire.py
+!/verifier_resultats.py
+!/.env.example
+
+# --- Documentation methodologique ---
+!/METHODOLOGIE_CALIBRATION_SEQUENTIELLE.md
+
+# --- Donnees d'entree et resultats de reference ---
+!/data/
+!/resultats_reference/
+
+# =============================================================================
+# Exclusions a l'interieur des dossiers autorises
+# =============================================================================
+
+# Secrets (cles API Anthropic / Gemini)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Fichiers temporaires Office et systeme
+~$*
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini

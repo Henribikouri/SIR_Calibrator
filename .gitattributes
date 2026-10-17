@@ -1,0 +1,12 @@
+# Code et documentation : fins de ligne normalisees
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+
+# Donnees et resultats : stockes octet pour octet, sans conversion des fins
+# de ligne, pour que la comparaison avec resultats_reference/ soit exacte
+*.csv   -text
+*.json  -text
+*.gaml  -text
+*.sir   -text
+*.png   binary

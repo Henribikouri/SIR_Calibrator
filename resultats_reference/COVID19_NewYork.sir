@@ -1,0 +1,85 @@
+/*
+ * Fichier de configuration SIR -- Format DSL (SIRConfig.xtext)
+ * Genere automatiquement par le Module M4 du pipeline de calibration
+ * Date : 2026-08-07 11:14:43
+ *
+ * Calendrier theta(t) : 52 regimes successifs (voir bloc
+ * `regimes` ci-dessous). beta (min_infectious_time) reste constant.
+ */
+
+sir-config COVID19_NewYork_2020 {
+
+    // Identification de la maladie et de la source de donnees
+    disease : "Ebola (EVD)"
+    source  : "JHU CSSE COVID-19 Dataset -- USA County-Wise"
+    region  : "Sierra Leone"
+    period  : "2020-01-22 to 2020-07-27"
+
+    // beta = min_infectious_time = duree minimale infectieuse (jours),
+    // FIXE (non calibre) sur toute la simulation
+    beta   : 7
+
+    // Methode de calibration utilisee
+    method : SEQUENTIAL_WINDOWS_DE_NM
+
+    // Metriques de validation (reconstruction globale)
+    rmse   : 129.12
+    r2     : 0.955300
+
+    // Calendrier de regimes theta_k = (alpha_k, gamma_k) -- un bloc par
+    // fenetre temporelle calibree, ordonne chronologiquement
+    regimes {
+    regime { index: 0  day_start: 0  day_end: 5  alpha: 0.359408  gamma: 0.387272  r0: 0.9281 }
+    regime { index: 1  day_start: 5  day_end: 10  alpha: 0.239624  gamma: 0.130723  r0: 1.8331 }
+    regime { index: 2  day_start: 10  day_end: 15  alpha: 0.242926  gamma: 0.119727  r0: 2.0290 }
+    regime { index: 3  day_start: 15  day_end: 20  alpha: 0.205036  gamma: 0.133724  r0: 1.5333 }
+    regime { index: 4  day_start: 20  day_end: 25  alpha: 0.187849  gamma: 0.156505  r0: 1.2003 }
+    regime { index: 5  day_start: 25  day_end: 30  alpha: 0.189492  gamma: 0.183893  r0: 1.0304 }
+    regime { index: 6  day_start: 30  day_end: 35  alpha: 0.161237  gamma: 0.241115  r0: 0.6687 }
+    regime { index: 7  day_start: 35  day_end: 40  alpha: 0.139166  gamma: 0.324419  r0: 0.4290 }
+    regime { index: 8  day_start: 40  day_end: 45  alpha: 0.125423  gamma: 0.222870  r0: 0.5628 }
+    regime { index: 9  day_start: 45  day_end: 50  alpha: 0.129765  gamma: 0.237570  r0: 0.5462 }
+    regime { index: 10  day_start: 50  day_end: 55  alpha: 0.148887  gamma: 0.188913  r0: 0.7881 }
+    regime { index: 11  day_start: 55  day_end: 60  alpha: 0.169247  gamma: 0.172564  r0: 0.9808 }
+    regime { index: 12  day_start: 60  day_end: 65  alpha: 0.180881  gamma: 0.168105  r0: 1.0760 }
+    regime { index: 13  day_start: 65  day_end: 70  alpha: 0.178176  gamma: 0.197490  r0: 0.9022 }
+    regime { index: 14  day_start: 70  day_end: 75  alpha: 0.179929  gamma: 0.176795  r0: 1.0177 }
+    regime { index: 15  day_start: 75  day_end: 80  alpha: 0.188784  gamma: 0.173590  r0: 1.0875 }
+    regime { index: 16  day_start: 80  day_end: 85  alpha: 0.178885  gamma: 0.213815  r0: 0.8366 }
+    regime { index: 17  day_start: 85  day_end: 90  alpha: 0.163183  gamma: 0.210590  r0: 0.7749 }
+    regime { index: 18  day_start: 90  day_end: 95  alpha: 0.192129  gamma: 0.129611  r0: 1.4824 }
+    regime { index: 19  day_start: 95  day_end: 100  alpha: 0.177774  gamma: 0.207006  r0: 0.8588 }
+    regime { index: 20  day_start: 100  day_end: 105  alpha: 0.179169  gamma: 0.374976  r0: 0.4778 }
+    regime { index: 21  day_start: 105  day_end: 110  alpha: 0.175043  gamma: 0.145668  r0: 1.2017 }
+    regime { index: 22  day_start: 110  day_end: 115  alpha: 0.175894  gamma: 0.190954  r0: 0.9211 }
+    regime { index: 23  day_start: 115  day_end: 120  alpha: 0.180042  gamma: 0.168545  r0: 1.0682 }
+    regime { index: 24  day_start: 120  day_end: 125  alpha: 0.191438  gamma: 0.178257  r0: 1.0739 }
+    regime { index: 25  day_start: 125  day_end: 130  alpha: 0.189296  gamma: 0.179152  r0: 1.0566 }
+    regime { index: 26  day_start: 130  day_end: 135  alpha: 0.184023  gamma: 0.196042  r0: 0.9387 }
+    regime { index: 27  day_start: 135  day_end: 140  alpha: 0.174606  gamma: 0.221155  r0: 0.7895 }
+    regime { index: 28  day_start: 140  day_end: 145  alpha: 0.179367  gamma: 0.168631  r0: 1.0637 }
+    regime { index: 29  day_start: 145  day_end: 150  alpha: 0.176644  gamma: 0.197233  r0: 0.8956 }
+    regime { index: 30  day_start: 150  day_end: 155  alpha: 0.160836  gamma: 0.252139  r0: 0.6379 }
+    regime { index: 31  day_start: 155  day_end: 160  alpha: 0.163252  gamma: 0.199088  r0: 0.8200 }
+    regime { index: 32  day_start: 160  day_end: 165  alpha: 0.175581  gamma: 0.176857  r0: 0.9928 }
+    regime { index: 33  day_start: 165  day_end: 170  alpha: 0.202142  gamma: 0.144155  r0: 1.4023 }
+    regime { index: 34  day_start: 170  day_end: 175  alpha: 0.213136  gamma: 0.137744  r0: 1.5473 }
+    regime { index: 35  day_start: 175  day_end: 180  alpha: 0.191898  gamma: 0.198364  r0: 0.9674 }
+    regime { index: 36  day_start: 180  day_end: 185  alpha: 0.176381  gamma: 0.275490  r0: 0.6402 }
+    regime { index: 37  day_start: 185  day_end: 190  alpha: 0.165535  gamma: 0.180752  r0: 0.9158 }
+    regime { index: 38  day_start: 190  day_end: 195  alpha: 0.185865  gamma: 0.138945  r0: 1.3377 }
+    regime { index: 39  day_start: 195  day_end: 200  alpha: 0.195160  gamma: 0.166263  r0: 1.1738 }
+    regime { index: 40  day_start: 200  day_end: 205  alpha: 0.198662  gamma: 0.175751  r0: 1.1304 }
+    regime { index: 41  day_start: 205  day_end: 210  alpha: 0.195660  gamma: 0.185282  r0: 1.0560 }
+    regime { index: 42  day_start: 210  day_end: 215  alpha: 0.192001  gamma: 0.181486  r0: 1.0579 }
+    regime { index: 43  day_start: 215  day_end: 220  alpha: 0.175691  gamma: 0.216267  r0: 0.8124 }
+    regime { index: 44  day_start: 220  day_end: 225  alpha: 0.163602  gamma: 0.246341  r0: 0.6641 }
+    regime { index: 45  day_start: 225  day_end: 230  alpha: 0.184861  gamma: 0.149315  r0: 1.2381 }
+    regime { index: 46  day_start: 230  day_end: 235  alpha: 0.190503  gamma: 0.183000  r0: 1.0410 }
+    regime { index: 47  day_start: 235  day_end: 240  alpha: 0.167465  gamma: 0.250902  r0: 0.6675 }
+    regime { index: 48  day_start: 240  day_end: 245  alpha: 0.082004  gamma: 0.389327  r0: 0.2106 }
+    regime { index: 49  day_start: 245  day_end: 250  alpha: 0.082004  gamma: 0.389327  r0: 0.2106 }
+    regime { index: 50  day_start: 250  day_end: 255  alpha: 0.082004  gamma: 0.389327  r0: 0.2106 }
+    regime { index: 51  day_start: 255  day_end: 258  alpha: 0.082004  gamma: 0.389327  r0: 0.2106 }
+    }
+}

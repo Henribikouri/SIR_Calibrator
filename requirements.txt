@@ -1,0 +1,17 @@
+# Dependances du pipeline sir_calibrator (M1 -> M6)
+# Python 3.12 requis (numpy 1.26.4 ne fournit pas de roue pour Python 3.13+).
+# Versions figees : ce sont celles qui ont produit resultats_reference/.
+# L'optimiseur (DE + Nelder-Mead) et le solveur odeint sont sensibles aux
+# versions de numpy/scipy : ne pas les mettre a jour pour reproduire.
+
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.3
+matplotlib==3.10.8
+SALib==1.5.2           # analyse de sensibilite de Sobol (M5)
+python-dotenv==1.1.0   # lecture optionnelle de .env (M2)
+
+# Clients IA de M2 : importes systematiquement, mais interroges seulement si
+# une cle API est fournie. Sans cle, M2 utilise le repli litterature.
+google-genai==1.54.0
+anthropic==0.104.1
