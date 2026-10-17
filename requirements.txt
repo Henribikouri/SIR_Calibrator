@@ -8,7 +8,7 @@ numpy==1.26.4
 pandas==2.2.3
 scipy==1.15.3
 matplotlib==3.10.8
-SALib==1.5.2           # analyse de sensibilite de Sobol (M5)
+SALib==1.5.1           # Sobol (M5) ; 1.5.2 exige numpy>=2, incompatible ici
 python-dotenv==1.1.0   # lecture optionnelle de .env (M2)
 
 # Clients IA de M2 : importes systematiquement, mais interroges seulement si
