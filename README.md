@@ -41,8 +41,8 @@ Tous les fichiers correspondants se trouvent dans
 Windows (PowerShell) :
 
 ```powershell
-git clone https://github.com/<compte>/sir_calibrator.git
-cd sir_calibrator
+git clone https://github.com/Henribikouri/SIR_Calibrator.git
+cd SIR_Calibrator
 py -3.12 -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -55,8 +55,8 @@ Si PowerShell refuse d'activer l'environnement, exécuter d'abord
 Linux / macOS :
 
 ```bash
-git clone https://github.com/<compte>/sir_calibrator.git
-cd sir_calibrator
+git clone https://github.com/Henribikouri/SIR_Calibrator.git
+cd SIR_Calibrator
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
